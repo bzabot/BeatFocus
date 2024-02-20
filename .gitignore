@@ -1,5 +1,6 @@
-spotify_creds.py
+app/spotify_creds.py
 ..txt
 .cache
 env
 __pycache__
+app/__pycache__

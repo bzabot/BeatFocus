@@ -1,17 +1,16 @@
 from customtkinter import *
-from alarm_controller import AlarmController
-from spotify_controller import SpotifyController
-import spotify_creds
+from app.alarm_controller import AlarmController
+from app.spotify_controller import SpotifyController
+import app.spotify_creds
 
 WORK_TIME = 30*60
 SHORT_BREAK_TIME = 5*60
-LONG_BREAK_TIME = 15
-CLIENT_ID = spotify_creds.CLIENT_ID
-CLIENT_SECRET = spotify_creds.CLIENT_SECRET
+CLIENT_ID = app.spotify_creds.CLIENT_ID
+CLIENT_SECRET = app.spotify_creds.CLIENT_SECRET
 REDIRECT_URI = "http://localhost:8888/callback"
 PLAYLIST_URI = "spotify:playlist:37i9dQZF1DWZeKCadgRdKQ"
 
-ALARME = 'alarm_sound.mp3'
+ALARME = 'app/alarm_sound.mp3'
 
 
 class InterfacePomodoro:

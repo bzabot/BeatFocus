@@ -1,5 +1,4 @@
 from playsound import playsound
-from time import sleep
 
 class AlarmController():
     def __init__(self, alarm):
@@ -10,5 +9,5 @@ class AlarmController():
 
 
 if __name__ == '__main__':
-    alarm = AlarmController('alarm_sound.mp3')
+    alarm = AlarmController('app/alarm_sound.mp3')
     alarm.play()
