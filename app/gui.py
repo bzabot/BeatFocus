@@ -3,7 +3,7 @@ from app.alarm_controller import AlarmController
 from app.spotify_controller import SpotifyController
 import app.spotify_creds
 
-WORK_TIME = 30*60
+WORK_TIME = 25*60
 SHORT_BREAK_TIME = 5*60
 CLIENT_ID = app.spotify_creds.CLIENT_ID
 CLIENT_SECRET = app.spotify_creds.CLIENT_SECRET
@@ -111,7 +111,11 @@ class InterfacePomodoro:
             minutes, seconds = divmod(self.work_time if self.is_work_time else self.break_time, 60)
             self.timer_label.configure(text="{:02d}:{:02d}".format(minutes, seconds))
             self.app.after(1000, self.update_timer)
+        else:
+            try:
+                self.spotify_controller.pause(self.session)
+            except:
+                pass
         
 
 
-InterfacePomodoro()

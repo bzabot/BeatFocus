@@ -1,4 +1,4 @@
-from app import gui, spotify_creds
+from app import gui
 
 if __name__ == '__main__':
     gui.InterfacePomodoro()

@@ -10,4 +10,8 @@ The Pomofy is a Python project designed to help improve your focus and productiv
 -
 -
 
+## App
+![Testing the app](https://imgur.com/a/0RiBO9d)
+- There is a pause between the focus/pause due to the alarm sound.
+
 
