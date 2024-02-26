@@ -1,12 +1,14 @@
 from customtkinter import *
 from app.alarm_controller import AlarmController
 from app.spotify_controller import SpotifyController
-import app.spotify_creds
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 WORK_TIME = 25*60
 SHORT_BREAK_TIME = 5*60
-CLIENT_ID = app.spotify_creds.CLIENT_ID
-CLIENT_SECRET = app.spotify_creds.CLIENT_SECRET
+CLIENT_ID = os.getenv('CLIENT_ID')
+CLIENT_SECRET = os.getenv('CLIENT_SECRET')
 REDIRECT_URI = "http://localhost:8888/callback"
 PLAYLIST_URI = "spotify:playlist:37i9dQZF1DWZeKCadgRdKQ"
 
